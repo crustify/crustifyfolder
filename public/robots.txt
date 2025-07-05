@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location (add your sitemap URL when you have one)
+# Sitemap: https://crustifycafe.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

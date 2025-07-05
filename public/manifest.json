@@ -1,0 +1,38 @@
+{
+  "short_name": "Crustify Café",
+  "name": "Crustify Café - Pure Vegetarian Restaurant",
+  "description": "Experience the finest vegetarian cuisine in Madanthyar. Fresh, delicious vegetarian meals, snacks, and beverages.",
+  "icons": [
+    {
+      "src": "images/logo_circle.jpg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/logo_circle.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/logo_circle.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#d4af37",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["food", "restaurant", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "images/logo_circle.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}
