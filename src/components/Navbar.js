@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo_circle.webp';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <img src="/images/logo_circle.jpg" alt="Crustify Café Logo" className="nav-logo-img" />
+          <img src={logo} alt="Crustify Café Logo" className="nav-logo-img" />
           <div className="nav-logo-text">
             <h2>Crustify Café</h2>
             <span className="nav-tagline">Pure Vegetarian Excellence</span>
@@ -65,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default React.memo(Navbar); 

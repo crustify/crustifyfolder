@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import img1 from '../assets/Screenshot_2025-07-05_152610.webp';
+import img2 from '../assets/Screenshot_2025-07-05_152650.webp';
+import img3 from '../assets/Screenshot_2025-07-05_152736.webp';
+import img4 from '../assets/Screenshot_2025-07-05_152757.webp';
+import img5 from '../assets/Screenshot_2025-07-05_152818.webp';
+import img6 from '../assets/Screenshot_2025-07-05_152857.webp';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -14,39 +20,39 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "/images/Screenshot%202025-07-05%20152610.png",
+      src: img1,
       alt: "Pure Vegetarian Excellence",
       category: "Core Value 1"
     },
     {
       id: 2,
-      src: "/images/Screenshot%202025-07-05%20152650.png",
+      src: img2,
       alt: "Uncompromising Freshness & Quality",
       category: "Core Value 2"
     },
     {
       id: 3,
-      src: "/images/Screenshot%202025-07-05%20152736.png",
+      src: img3,
       alt: "Continuous Innovation in Taste & Service",
       category: "Core Value 3"
     },
     {
       id: 4,
-      src: "/images/Screenshot%202025-07-05%20152757.png",
+      src: img4,
       alt: "Warmth & Hospitality in Every Interaction",
       category: "Core Value 4"
     },
     {
       id: 5,
-      src: "/images/Screenshot%202025-07-05%20152818.png",
+      src: img5,
       alt: "Cleanliness & Hygiene",
       category: "Core Value 5"
     },
     {
       id: 6,
-      src: "/images/Screenshot%202025-07-05%20152857.png",
+      src: img6,
       alt: "Customer Satisfaction at the Heart of Everything We Do",
-      category: "Core Value 1"
+      category: "Core Value 6"
     }
   ];
 
@@ -70,7 +76,7 @@ const Gallery = () => {
           {galleryImages.map(image => (
             <div key={image.id} className="gallery-item">
               <div className="gallery-image-container">
-                <img src={image.src} alt={image.alt} />
+                <img src={image.src} alt={image.alt} loading="lazy" />
                 <div className="gallery-overlay">
                   <div className="gallery-content">
                     <span className="gallery-category">{image.category}</span>
@@ -102,7 +108,7 @@ const Gallery = () => {
                 <i className="fas fa-times"></i>
               </button>
               <div className="modal-image-container">
-                <img src={selectedImage.src} alt={selectedImage.alt} />
+                <img src={selectedImage.src} alt={selectedImage.alt} loading="lazy" />
               </div>
               <div className="modal-info">
                 <span className="modal-category">{selectedImage.category}</span>
@@ -116,4 +122,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery; 
+export default React.memo(Gallery); 
